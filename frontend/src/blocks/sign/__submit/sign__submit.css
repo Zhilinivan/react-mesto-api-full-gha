@@ -1,0 +1,19 @@
+.sign__submit {
+  margin: 186px 0 0;
+  padding: 14px 0;
+  color: black;
+  background-color: white;
+  border-radius: 2px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.sign__submit:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 1s, ease, 1s;
+}

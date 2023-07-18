@@ -1,0 +1,5 @@
+.card__like-group {
+  margin: 22px 20px 22px 0;
+  padding: 0;
+  flex-direction: column;
+}

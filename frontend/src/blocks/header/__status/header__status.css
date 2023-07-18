@@ -1,0 +1,5 @@
+.header__status {
+  display: flex;
+  align-items: center;
+  row-gap: 10px;
+}
