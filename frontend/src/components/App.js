@@ -98,7 +98,7 @@ function App() {
       .then(() => {
         setRegImage(sucess);
         setRegTitle("Вы успешно зарегистрировались!");
-        navigate("/sign-in");
+        navigate("/signin");
       })
       .catch(() => {
         setRegImage(unSucess);
@@ -250,7 +250,7 @@ function App() {
   function onSignOut() {
     setIsLoggedIn(false);
     setEmail(null);
-    navigate("/sign-in");
+    navigate("/signin");
     localStorage.removeItem("jwt");
   }
 
@@ -259,20 +259,20 @@ function App() {
       <div className="page">
         <Routes>
           <Route
-            path="/sign-in"
+            path="/signin"
             element={
               <>
-                <Header title="Регистрация" route="/sign-up" />
+                <Header title="Регистрация" route="/signup" />
                 <Login onLogin={onLogin} />
               </>
             }
           />
 
           <Route
-            path="/sign-up"
+            path="/signup"
             element={
               <>
-                <Header title="Войти" route="/sign-in" />
+                <Header title="Войти" route="/signin" />
                 <Register onRegister={onRegister} />
               </>
             }
@@ -307,7 +307,7 @@ function App() {
 
           <Route
             path="*"
-            element={<Navigate to={isLoggedIn ? "/" : "/sign-in"} />}
+            element={<Navigate to={isLoggedIn ? "/" : "/signin"} />}
           />
         </Routes>
 
