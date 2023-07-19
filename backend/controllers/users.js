@@ -76,13 +76,7 @@ function getUserInfo(req, res, next) {
 
       throw new NotFoundError('Пользователь не найден');
     })
-    .catch((error) => {
-      if (error.name === 'CastError') {
-        next(new BadRequestError('Переданы неккоректные данные.'));
-      } else {
-        next(error);
-      }
-    });
+    .catch(next);
 }
 
 const findUser = (req, res, next) => {
